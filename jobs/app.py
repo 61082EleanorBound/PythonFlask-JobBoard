@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-#created instance of flask
+#created instance of flask by Ellie
 app = Flask(__name__)
 
 @app.route('/')

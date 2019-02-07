@@ -15,8 +15,8 @@ def open_connection(): # new function
 
 def execute_sql(sql, values=(), commit=False, single=False):   # 4 parameters
     connection = open_connection() 
-    cursor = connection.exectue(sql,values) # curser = the return value
-    if commit==True:
+    cursor = connection.exectue(sql, values) # curser = the return value
+    if commit == True:
         results = connection.commit()
     else:
         results = cursor.fetchone() if single else curser.fetchall()

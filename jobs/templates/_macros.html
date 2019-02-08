@@ -1,0 +1,27 @@
+{% marco show_job(job) %} <!-- created template called show_job with parameter job-->
+<div class="card adjust-height">
+  <header class="card-header">
+    <p class="card-header-title">
+    <a href="">{{job['title']}}</a>
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="content">
+    <p>
+    	<a href="">{{job['employer_name']}}</a><br>
+    	${{jobs ['salary']}}<br>
+    	{{job['description']}}
+    	
+    </p>
+    </div>
+  </div>
+</div>
+{% endmacro %} 
+
+{% macro show_jobs(jobs) %} <!-- new show_jobs template passing parameter 'jobs' -->
+<div class="colums is-multiline">
+	{% for job in jobs %} <!-- begin of for loop -->
+	<div class="colums is-half">
+	{{show_job(job)}}
+</div>
+{% endfor %}
